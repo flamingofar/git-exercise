@@ -13,19 +13,17 @@ main {
 		minmax(1rem, 1fr)
 		minmax(auto, 1000px)
 		minmax(1rem, 1fr);
-	gap: 1rem 0;
+	/* gap: 1rem 0; */
 }
 main > * {
 	grid-column: 2;
 	padding: 2rem;
-	border: 1px black solid;
 }
 
 header {
 	display: flex;
 	justify-content: center;
 	background: #ffc8c8;
-	margin-bottom: 1rem;
 	padding-block: 1rem;
 }
 ul {
@@ -48,4 +46,26 @@ li:not(:first-child):before {
 	width: 0.1rem;
 	height: 100%;
 	background: #000;
+}
+
+.full {
+	display: inherit;
+	grid: inherit;
+	grid-column: 1 / -1;
+}
+
+.full > * {
+	grid-column: 2;
+}
+
+#projects,
+#about {
+	height: 100vh;
+}
+
+#projects {
+	background: lightpink;
+}
+#about {
+	background: rgb(240, 240, 240);
 }
